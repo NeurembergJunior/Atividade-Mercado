@@ -1,0 +1,66 @@
+package pkg10.questão;
+
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+
+public class Questão {
+
+    
+    @SuppressWarnings("empty-statement")
+    public static void main(String[] args) {
+        
+        Scanner entrada= new Scanner(System.in);
+       
+        List lista = new ArrayList();
+        
+        int opcao = 0;
+        
+        do{     
+            
+        System.out.println("O que você deseja fazer ? 1-Cadastrar 2-Remover 3-Atualizar 4-Listar 5-Encerrar ");
+        
+        
+          opcao = entrada.nextInt();
+        
+        
+        
+        
+        if (opcao == 1) {
+            
+            
+            
+            System.out.println("Qual produto vc deseja cadastrar ? ");
+            String resposta = new Scanner(System.in).nextLine();
+            lista.add(resposta);
+            
+        }
+        if (opcao == 2){
+        
+            System.out.println("Qual produto vc deseja remover ?");
+            String resposta = new  Scanner(System.in).nextLine();
+            lista.remove(resposta);
+             
+        }
+        
+        if (opcao == 3){
+            
+            
+        }
+        
+        if (opcao == 4){
+            while(!lista.isEmpty()){
+            System.out.println(lista.remove(0));}
+        }
+        
+        System.out.println("Concluido");
+        
+        
+        }while (opcao !=5);
+        
+        System.out.println("Progama encerrado!");
+    }
+}
+
